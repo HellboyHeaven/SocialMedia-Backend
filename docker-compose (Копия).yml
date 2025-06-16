@@ -1,0 +1,347 @@
+# Определяем сети
+networks:
+  # Основная сеть для микросервисов
+  socialmedia-backend:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+  # Отдельная сеть для баз данных
+  database-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.21.0.0/16
+
+  # Сеть для инфраструктуры (Kafka, Zookeeper)
+  infrastructure:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.22.0.0/16
+
+secrets:
+  jwt_public_key:
+    file: ./Secrets/Keys/publicKey.pem
+  jwt_private_key:
+    file: ./Secrets/Keys/privateKey.pem
+
+x-kafka-env: &kafka-env
+  Kafka__BootstrapServers: kafka:9092
+  Kafka__AllowAutoCreateTopics: true
+  Kafka__GroupId: default-group
+  Kafka__ClientId: message-bus-client
+  Kafka__SessionTimeoutMs: "30000"
+  Kafka__AutoCommitIntervalMs: "5000"
+  Kafka__EnableAutoCommit: "true"
+  Kafka__AutoOffsetReset: earliest
+  Kafka__MessageTimeoutMs: "30000"
+  Kafka__RequestTimeoutMs: "60000"
+  Kafka__SecurityProtocol: plaintext
+
+x-common-env: &common-env
+  ASPNETCORE_ENVIRONMENT: Development
+  JWT_PUBLIC_KEY_PATH: /run/secrets/jwt_public_key
+  <<: *kafka-env
+
+x-aws-env: &aws-env
+  AWS__AccessKey: REMOVED_SECRET
+  AWS__SecretKey: REMOVED_SECRET
+  AWS__Region: eu-north-1
+  AWS__BucketName: social-media.media
+  AWS__CloudFront: dkhsdbhvodkxu.cloudfront.net
+
+x-dep-service-started: &dep-service-started
+  condition: service_started
+
+x-dep-service-healthy: &dep-service-healthy
+  condition: service_healthy
+
+x-pg-healthcheck: &pg-healthcheck
+  test: ["CMD-SHELL", "pg_isready", "-d", "db"]
+  interval: 30s
+  timeout: 60s
+  retries: 5
+  start_period: 80s
+
+services:
+  gateway-service:
+    container_name: gateway-service
+    image: gateway:latest
+    build:
+      context: .
+      dockerfile: Gateway/Dockerfile
+    ports:
+      - "5000:8080"
+      - "5001:8081"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      - socialmedia-backend
+    # Статический IP (опционально)
+    # networks:
+    #   socialmedia-backend:
+    #     ipv4_address: 172.20.0.10
+
+  auth-service:
+    container_name: auth-service
+    image: auth:latest
+    build:
+      context: .
+      dockerfile: Auth/Dockerfile
+    ports:
+      - "5100:8080"
+      - "5101:8081"
+    environment:
+      <<:
+        - *common-env
+      ConnectionStrings__Database: Host=auth-db;Port=5432;Database=db;Username=postgres;Password=postgres
+      Kafka__GroupId: auth-service-group
+      JWT_PRIVATE_KEY_PATH: /run/secrets/jwt_private_key
+    depends_on:
+      kafka: *dep-service-healthy
+      auth-db: *dep-service-healthy
+    secrets:
+      - jwt_public_key
+      - jwt_private_key
+    networks:
+      - socialmedia-backend
+      - database-network
+      - infrastructure
+
+  post-service:
+    container_name: post-service
+    image: post:latest
+    build:
+      context: .
+      dockerfile: Post/Dockerfile
+    ports:
+      - "5200:8080"
+      - "5201:8081"
+    environment:
+      <<:
+        - *common-env
+        - *aws-env
+      Kafka__GroupId: post-service-group
+      ConnectionStrings__Database: Host=post-db;Port=5432;Database=db;Username=postgres;Password=postgres
+    depends_on:
+      kafka: *dep-service-healthy
+      post-db: *dep-service-healthy
+    secrets:
+      - jwt_public_key
+    networks:
+      - socialmedia-backend
+      - database-network
+      - infrastructure
+
+  profile-service:
+    container_name: profile-service
+    image: profile:latest
+    build:
+      context: .
+      dockerfile: Profile/Dockerfile
+    ports:
+      - "5300:8080"
+      - "5301:8081"
+    environment:
+      <<:
+        - *common-env
+      Kafka__GroupId: profile-service-group
+      ConnectionStrings__Database: Host=profile-db;Port=5432;Database=db;Username=postgres;Password=postgres
+    depends_on:
+      kafka: *dep-service-healthy
+      profile-db: *dep-service-healthy
+    secrets:
+      - jwt_public_key
+    networks:
+      - socialmedia-backend
+      - database-network
+      - infrastructure
+
+  comment-service:
+    container_name: comment-service
+    image: comment:latest
+    build:
+      context: .
+      dockerfile: Comment/Dockerfile
+    ports:
+      - "5400:8080"
+      - "5401:8081"
+    environment:
+      <<:
+        - *common-env
+        - *aws-env
+      Kafka__GroupId: comment-service-group
+      ConnectionStrings__Database: Host=comment-db;Port=5432;Database=db;Username=postgres;Password=postgres
+    depends_on:
+      kafka: *dep-service-healthy
+      post-db: *dep-service-healthy
+    secrets:
+      - jwt_public_key
+    networks:
+      - socialmedia-backend
+      - database-network
+      - infrastructure
+
+  like-service:
+    container_name: like-service
+    image: like:latest
+    build:
+      context: .
+      dockerfile: Like/Dockerfile
+    ports:
+      - "5500:8080"
+      - "5501:8081"
+    environment:
+      <<:
+        - *common-env
+      Kafka__GroupId: like-service-group
+      ConnectionStrings__Database: Host=like-db;Port=5432;Database=db;Username=postgres;Password=postgres
+    depends_on:
+      kafka: *dep-service-healthy
+      like-db: *dep-service-healthy
+    secrets:
+      - jwt_public_key
+    networks:
+      - socialmedia-backend
+      - database-network
+      - infrastructure
+
+  # Базы данных
+  auth-db:
+    image: postgres:15
+    container_name: auth-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: db
+    ports:
+      - "5433:5432"
+    healthcheck: *pg-healthcheck
+    networks:
+      - database-network
+    volumes:
+      - auth-db-data:/var/lib/postgresql/data
+
+  post-db:
+    image: postgres:15
+    container_name: post-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: db
+    ports:
+      - "5434:5432"
+    healthcheck: *pg-healthcheck
+    networks:
+      - database-network
+    volumes:
+      - post-db-data:/var/lib/postgresql/data
+
+  profile-db:
+    image: postgres:15
+    container_name: profile-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: db
+    ports:
+      - "5435:5432"
+    healthcheck: *pg-healthcheck
+    networks:
+      - database-network
+    volumes:
+      - profile-db-data:/var/lib/postgresql/data
+
+  comment-db:
+    image: postgres:15
+    container_name: comment-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: db
+    ports:
+      - "5436:5432"
+    healthcheck: *pg-healthcheck
+    networks:
+      - database-network
+    volumes:
+      - comment-db-data:/var/lib/postgresql/data
+
+  like-db:
+    image: postgres:15
+    container_name: like-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: db
+    ports:
+      - "5437:5432"
+    healthcheck: *pg-healthcheck
+    networks:
+      - database-network
+    volumes:
+      - like-db-data:/var/lib/postgresql/data
+
+  # Инфраструктура
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.0
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    networks:
+      - infrastructure
+
+  kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: kafka
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      KAFKA_LOG_RETENTION_MS: 600000
+      KAFKA_LOG_RETENTION_BYTES: 10485760
+      KAFKA_LOG_SEGMENT_MS: 300000
+      KAFKA_LOG_CLEANUP_POLICY: delete
+      KAFKA_LOG_RETENTION_CHECK_INTERVAL_MS: 60000
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "bash",
+          "-c",
+          "kafka-topics --bootstrap-server kafka:9092 --list || exit 1",
+        ]
+      interval: 10s
+      retries: 5
+    depends_on:
+      - zookeeper
+    networks:
+      - infrastructure
+
+  adminer:
+    container_name: adminer
+    image: adminer
+    restart: always
+    ports:
+      - 4000:8080
+    networks:
+      - database-network
+
+volumes:
+  auth-db-data:
+  post-db-data:
+  profile-db-data:
+  comment-db-data:
+  like-db-data:

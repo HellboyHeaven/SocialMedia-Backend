@@ -1,0 +1,428 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CFC4FAC1-AF6D-4A87-9D9B-6DCD476CFB91}|Gateway.API\\Gateway.API.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFC4FAC1-AF6D-4A87-9D9B-6DCD476CFB91}|Gateway.API\\Gateway.API.csproj|solutionrelative:gateway.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFC4FAC1-AF6D-4A87-9D9B-6DCD476CFB91}|Gateway.API\\Gateway.API.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.api\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFC4FAC1-AF6D-4A87-9D9B-6DCD476CFB91}|Gateway.API\\Gateway.API.csproj|solutionrelative:gateway.api\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5B0E958-A631-400D-8125-98FEFDD79106}|Gateway.Application\\Gateway.Application.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.application\\handlers\\loginuserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5B0E958-A631-400D-8125-98FEFDD79106}|Gateway.Application\\Gateway.Application.csproj|solutionrelative:gateway.application\\handlers\\loginuserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FBA2F09-5C67-49B3-BDBB-81ECE464B952}|Gateway.Core\\Gateway.Core.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.core\\errors\\serviceexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FBA2F09-5C67-49B3-BDBB-81ECE464B952}|Gateway.Core\\Gateway.Core.csproj|solutionrelative:gateway.core\\errors\\serviceexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FBA2F09-5C67-49B3-BDBB-81ECE464B952}|Gateway.Core\\Gateway.Core.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.core\\errors\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FBA2F09-5C67-49B3-BDBB-81ECE464B952}|Gateway.Core\\Gateway.Core.csproj|solutionrelative:gateway.core\\errors\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFC4FAC1-AF6D-4A87-9D9B-6DCD476CFB91}|Gateway.API\\Gateway.API.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.api\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CFC4FAC1-AF6D-4A87-9D9B-6DCD476CFB91}|Gateway.API\\Gateway.API.csproj|solutionrelative:gateway.api\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFC4FAC1-AF6D-4A87-9D9B-6DCD476CFB91}|Gateway.API\\Gateway.API.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.api\\ocelot.swaggerendpoints.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CFC4FAC1-AF6D-4A87-9D9B-6DCD476CFB91}|Gateway.API\\Gateway.API.csproj|solutionrelative:gateway.api\\ocelot.swaggerendpoints.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFC4FAC1-AF6D-4A87-9D9B-6DCD476CFB91}|Gateway.API\\Gateway.API.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CFC4FAC1-AF6D-4A87-9D9B-6DCD476CFB91}|Gateway.API\\Gateway.API.csproj|solutionrelative:gateway.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFC4FAC1-AF6D-4A87-9D9B-6DCD476CFB91}|Gateway.API\\Gateway.API.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFC4FAC1-AF6D-4A87-9D9B-6DCD476CFB91}|Gateway.API\\Gateway.API.csproj|solutionrelative:gateway.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3AA438B-75AE-4566-891A-1B07276A5F15}|Gateway.Persistance\\Gateway.Persistance.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.persistance\\stores\\refreshtokenstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3AA438B-75AE-4566-891A-1B07276A5F15}|Gateway.Persistance\\Gateway.Persistance.csproj|solutionrelative:gateway.persistance\\stores\\refreshtokenstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3AA438B-75AE-4566-891A-1B07276A5F15}|Gateway.Persistance\\Gateway.Persistance.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.persistance\\configurations\\refreshtokenconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3AA438B-75AE-4566-891A-1B07276A5F15}|Gateway.Persistance\\Gateway.Persistance.csproj|solutionrelative:gateway.persistance\\configurations\\refreshtokenconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3AA438B-75AE-4566-891A-1B07276A5F15}|Gateway.Persistance\\Gateway.Persistance.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.persistance\\configurations\\authconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3AA438B-75AE-4566-891A-1B07276A5F15}|Gateway.Persistance\\Gateway.Persistance.csproj|solutionrelative:gateway.persistance\\configurations\\authconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3AA438B-75AE-4566-891A-1B07276A5F15}|Gateway.Persistance\\Gateway.Persistance.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.persistance\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3AA438B-75AE-4566-891A-1B07276A5F15}|Gateway.Persistance\\Gateway.Persistance.csproj|solutionrelative:gateway.persistance\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3AA438B-75AE-4566-891A-1B07276A5F15}|Gateway.Persistance\\Gateway.Persistance.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.persistance\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3AA438B-75AE-4566-891A-1B07276A5F15}|Gateway.Persistance\\Gateway.Persistance.csproj|solutionrelative:gateway.persistance\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5B0E958-A631-400D-8125-98FEFDD79106}|Gateway.Application\\Gateway.Application.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.application\\providers\\tokenprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5B0E958-A631-400D-8125-98FEFDD79106}|Gateway.Application\\Gateway.Application.csproj|solutionrelative:gateway.application\\providers\\tokenprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5B0E958-A631-400D-8125-98FEFDD79106}|Gateway.Application\\Gateway.Application.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.application\\commands\\loginusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5B0E958-A631-400D-8125-98FEFDD79106}|Gateway.Application\\Gateway.Application.csproj|solutionrelative:gateway.application\\commands\\loginusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5B0E958-A631-400D-8125-98FEFDD79106}|Gateway.Application\\Gateway.Application.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.application\\commands\\refreshtokencommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5B0E958-A631-400D-8125-98FEFDD79106}|Gateway.Application\\Gateway.Application.csproj|solutionrelative:gateway.application\\commands\\refreshtokencommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FBA2F09-5C67-49B3-BDBB-81ECE464B952}|Gateway.Core\\Gateway.Core.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.core\\entities\\refreshtokenentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FBA2F09-5C67-49B3-BDBB-81ECE464B952}|Gateway.Core\\Gateway.Core.csproj|solutionrelative:gateway.core\\entities\\refreshtokenentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3AA438B-75AE-4566-891A-1B07276A5F15}|Gateway.Persistance\\Gateway.Persistance.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.persistance\\stores\\authstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3AA438B-75AE-4566-891A-1B07276A5F15}|Gateway.Persistance\\Gateway.Persistance.csproj|solutionrelative:gateway.persistance\\stores\\authstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5B0E958-A631-400D-8125-98FEFDD79106}|Gateway.Application\\Gateway.Application.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.application\\handlers\\registeruserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5B0E958-A631-400D-8125-98FEFDD79106}|Gateway.Application\\Gateway.Application.csproj|solutionrelative:gateway.application\\handlers\\registeruserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FBA2F09-5C67-49B3-BDBB-81ECE464B952}|Gateway.Core\\Gateway.Core.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.core\\stores\\iuserstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FBA2F09-5C67-49B3-BDBB-81ECE464B952}|Gateway.Core\\Gateway.Core.csproj|solutionrelative:gateway.core\\stores\\iuserstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5B0E958-A631-400D-8125-98FEFDD79106}|Gateway.Application\\Gateway.Application.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.application\\handlers\\refreshtokenhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5B0E958-A631-400D-8125-98FEFDD79106}|Gateway.Application\\Gateway.Application.csproj|solutionrelative:gateway.application\\handlers\\refreshtokenhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FBA2F09-5C67-49B3-BDBB-81ECE464B952}|Gateway.Core\\Gateway.Core.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.core\\entities\\authentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FBA2F09-5C67-49B3-BDBB-81ECE464B952}|Gateway.Core\\Gateway.Core.csproj|solutionrelative:gateway.core\\entities\\authentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5B0E958-A631-400D-8125-98FEFDD79106}|Gateway.Application\\Gateway.Application.csproj|d:\\projects\\backend\\socialmedia\\gateway\\gateway.application\\dependecyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5B0E958-A631-400D-8125-98FEFDD79106}|Gateway.Application\\Gateway.Application.csproj|solutionrelative:gateway.application\\dependecyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 23,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ServiceException.cs",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Core\\Errors\\ServiceException.cs",
+              "RelativeDocumentMoniker": "Gateway.Core\\Errors\\ServiceException.cs",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Core\\Errors\\ServiceException.cs",
+              "RelativeToolTip": "Gateway.Core\\Errors\\ServiceException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T15:37:07.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NotFoundException.cs",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Core\\Errors\\NotFoundException.cs",
+              "RelativeDocumentMoniker": "Gateway.Core\\Errors\\NotFoundException.cs",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Core\\Errors\\NotFoundException.cs",
+              "RelativeToolTip": "Gateway.Core\\Errors\\NotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T15:37:17.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ocelot.SwaggerEndPoints.json",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.API\\ocelot.SwaggerEndPoints.json",
+              "RelativeDocumentMoniker": "Gateway.API\\ocelot.SwaggerEndPoints.json",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.API\\ocelot.SwaggerEndPoints.json",
+              "RelativeToolTip": "Gateway.API\\ocelot.SwaggerEndPoints.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-17T14:03:48.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Gateway.API\\appsettings.json",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.API\\appsettings.json",
+              "RelativeToolTip": "Gateway.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-17T14:03:15.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ocelot.json",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.API\\ocelot.json",
+              "RelativeDocumentMoniker": "Gateway.API\\ocelot.json",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.API\\ocelot.json",
+              "RelativeToolTip": "Gateway.API\\ocelot.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-17T14:02:36.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RefreshTokenCommand.cs",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Application\\Commands\\RefreshTokenCommand.cs",
+              "RelativeDocumentMoniker": "Gateway.Application\\Commands\\RefreshTokenCommand.cs",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Application\\Commands\\RefreshTokenCommand.cs",
+              "RelativeToolTip": "Gateway.Application\\Commands\\RefreshTokenCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T13:32:00.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RefreshTokenStore.cs",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Persistance\\Stores\\RefreshTokenStore.cs",
+              "RelativeDocumentMoniker": "Gateway.Persistance\\Stores\\RefreshTokenStore.cs",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Persistance\\Stores\\RefreshTokenStore.cs",
+              "RelativeToolTip": "Gateway.Persistance\\Stores\\RefreshTokenStore.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAQwDEAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T12:56:35.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "RegisterUserHandler.cs",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Application\\Handlers\\RegisterUserHandler.cs",
+              "RelativeDocumentMoniker": "Gateway.Application\\Handlers\\RegisterUserHandler.cs",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Application\\Handlers\\RegisterUserHandler.cs",
+              "RelativeToolTip": "Gateway.Application\\Handlers\\RegisterUserHandler.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAawBUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T12:48:25.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IUserStore.cs",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Core\\Stores\\IUserStore.cs",
+              "RelativeDocumentMoniker": "Gateway.Core\\Stores\\IUserStore.cs",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Core\\Stores\\IUserStore.cs",
+              "RelativeToolTip": "Gateway.Core\\Stores\\IUserStore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T12:47:01.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AuthStore.cs",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Persistance\\Stores\\AuthStore.cs",
+              "RelativeDocumentMoniker": "Gateway.Persistance\\Stores\\AuthStore.cs",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Persistance\\Stores\\AuthStore.cs",
+              "RelativeToolTip": "Gateway.Persistance\\Stores\\AuthStore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T12:46:53.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LoginUserCommand.cs",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Application\\Commands\\LoginUserCommand.cs",
+              "RelativeDocumentMoniker": "Gateway.Application\\Commands\\LoginUserCommand.cs",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Application\\Commands\\LoginUserCommand.cs",
+              "RelativeToolTip": "Gateway.Application\\Commands\\LoginUserCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T12:46:43.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "RefreshTokenHandler.cs",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Application\\Handlers\\RefreshTokenHandler.cs",
+              "RelativeDocumentMoniker": "Gateway.Application\\Handlers\\RefreshTokenHandler.cs",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Application\\Handlers\\RefreshTokenHandler.cs",
+              "RelativeToolTip": "Gateway.Application\\Handlers\\RefreshTokenHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T12:46:37.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RefreshTokenEntity.cs",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Core\\Entities\\RefreshTokenEntity.cs",
+              "RelativeDocumentMoniker": "Gateway.Core\\Entities\\RefreshTokenEntity.cs",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Core\\Entities\\RefreshTokenEntity.cs",
+              "RelativeToolTip": "Gateway.Core\\Entities\\RefreshTokenEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T12:38:54.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AuthEntity.cs",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Core\\Entities\\AuthEntity.cs",
+              "RelativeDocumentMoniker": "Gateway.Core\\Entities\\AuthEntity.cs",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Core\\Entities\\AuthEntity.cs",
+              "RelativeToolTip": "Gateway.Core\\Entities\\AuthEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T12:38:51.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RefreshTokenConfiguration.cs",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Persistance\\Configurations\\RefreshTokenConfiguration.cs",
+              "RelativeDocumentMoniker": "Gateway.Persistance\\Configurations\\RefreshTokenConfiguration.cs",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Persistance\\Configurations\\RefreshTokenConfiguration.cs",
+              "RelativeToolTip": "Gateway.Persistance\\Configurations\\RefreshTokenConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T12:36:17.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AuthConfiguration.cs",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Persistance\\Configurations\\AuthConfiguration.cs",
+              "RelativeDocumentMoniker": "Gateway.Persistance\\Configurations\\AuthConfiguration.cs",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Persistance\\Configurations\\AuthConfiguration.cs",
+              "RelativeToolTip": "Gateway.Persistance\\Configurations\\AuthConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T12:35:53.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Persistance\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "Gateway.Persistance\\DependencyInjection.cs",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Persistance\\DependencyInjection.cs",
+              "RelativeToolTip": "Gateway.Persistance\\DependencyInjection.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowCYAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T12:05:27.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "DependecyInjection.cs",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Application\\DependecyInjection.cs",
+              "RelativeDocumentMoniker": "Gateway.Application\\DependecyInjection.cs",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Application\\DependecyInjection.cs",
+              "RelativeToolTip": "Gateway.Application\\DependecyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T12:04:17.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.API\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "Gateway.API\\DependencyInjection.cs",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.API\\DependencyInjection.cs*",
+              "RelativeToolTip": "Gateway.API\\DependencyInjection.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T12:04:07.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Gateway.API\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Gateway.API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAEwBsAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T12:04:04.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TokenProvider.cs",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Application\\Providers\\TokenProvider.cs",
+              "RelativeDocumentMoniker": "Gateway.Application\\Providers\\TokenProvider.cs",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Application\\Providers\\TokenProvider.cs",
+              "RelativeToolTip": "Gateway.Application\\Providers\\TokenProvider.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAqwB8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T20:26:00.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AuthDbContext.cs",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Persistance\\AuthDbContext.cs",
+              "RelativeDocumentMoniker": "Gateway.Persistance\\AuthDbContext.cs",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Persistance\\AuthDbContext.cs",
+              "RelativeToolTip": "Gateway.Persistance\\AuthDbContext.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T20:15:43.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginUserHandler.cs",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Application\\Handlers\\LoginUserHandler.cs",
+              "RelativeDocumentMoniker": "Gateway.Application\\Handlers\\LoginUserHandler.cs",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.Application\\Handlers\\LoginUserHandler.cs",
+              "RelativeToolTip": "Gateway.Application\\Handlers\\LoginUserHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwCcAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T20:12:26.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.API\\Program.cs",
+              "RelativeDocumentMoniker": "Gateway.API\\Program.cs",
+              "ToolTip": "D:\\Projects\\Backend\\SocialMedia\\Gateway\\Gateway.API\\Program.cs*",
+              "RelativeToolTip": "Gateway.API\\Program.cs*",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAACoAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T20:11:32.493Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
