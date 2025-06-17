@@ -1,9 +1,9 @@
 namespace Application;
 
-public class CommentWithPostModel
+public class CommentWithPostIdModel
 {
     public required Guid Id { get; set; }
-    public PostModel Post { get; set; }
+    public Guid PostId { get; set; }
     public ProfileModel Author { get; set; }
     public string Content { get; set; } = "";
     public IEnumerable<string> Medias { get; set; } = [];

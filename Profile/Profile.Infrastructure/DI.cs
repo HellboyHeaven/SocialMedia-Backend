@@ -14,6 +14,8 @@ public static class DI
 {
     public static IServiceCollection InjectInfrastrcutrue(this IServiceCollection services, IConfiguration config)
     {
+        services.AddHttpContextAccessor();
+        services.AddScoped<ICurrentUserService, CurrentUserService>();
         services.AddCdn(config);
         services.AddScoped<IMessageManager, MessageManager>();
         services.AddMessageBus(config, "Kafka", Assembly.GetExecutingAssembly());

@@ -46,11 +46,11 @@ x-common-env: &common-env
   <<: *kafka-env
 
 x-aws-env: &aws-env
-  AWS__AccessKey: REMOVED_SECRET
-  AWS__SecretKey: REMOVED_SECRET
-  AWS__Region: eu-north-1
-  AWS__BucketName: social-media.media
-  AWS__CloudFront: dkhsdbhvodkxu.cloudfront.net
+  AWS__AccessKey: ${AWS__AccessKey}
+  AWS__SecretKey: ${AWS__SecretKey}
+  AWS__Region: ${AWS__Region}
+  AWS__BucketName: ${AWS__BucketName}
+  AWS__CloudFront: ${AWS__CloudFront}
 
 x-dep-service-started: &dep-service-started
   condition: service_started

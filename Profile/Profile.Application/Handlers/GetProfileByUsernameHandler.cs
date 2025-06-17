@@ -2,7 +2,7 @@ using MediatR;
 
 namespace Application;
 
-public partial class GetProfileByUsernameHandler(IProfileStore profileStore) : IRequestHandler<GetProfileByUsernameCommand, ProfileModel?>
+public class GetProfileByUsernameHandler(IProfileStore profileStore) : IRequestHandler<GetProfileByUsernameCommand, ProfileModel?>
 {
     public async Task<ProfileModel?> Handle(GetProfileByUsernameCommand request, CancellationToken cancellationToken)
     {

@@ -3,9 +3,9 @@ using ServiceExeption.Exceptions;
 
 namespace Application;
 
-public class GetCommentsByUsernameHandler(ICommentStore commentStore, IMessageManager messageManager, ICurrentUserService currentUser) : IRequestHandler<GetCommentsByUsernameCommand, List<CommentWithPostModel>>
+public class GetCommentsByUsernameHandler(ICommentStore commentStore, IMessageManager messageManager, ICurrentUserService currentUser) : IRequestHandler<GetCommentsByUsernameCommand, List<CommentWithPostIdModel>>
 {
-    public async Task<List<CommentWithPostModel>> Handle(GetCommentsByUsernameCommand request, CancellationToken cancellationToken)
+    public async Task<List<CommentWithPostIdModel>> Handle(GetCommentsByUsernameCommand request, CancellationToken cancellationToken)
     {
         var authorId = await messageManager.GetUserIdAsync(request.Username);
         if (authorId == null)
@@ -18,12 +18,11 @@ public class GetCommentsByUsernameHandler(ICommentStore commentStore, IMessageMa
             var authorTask = messageManager.GetProfileById(comment.AuthorId);
             var likeCountTask = messageManager.GetLikeCount(comment.Id);
             var likedTask = currentUser.Exists ? messageManager.GetLikeExists(comment.Id, currentUser.Id) : Task.FromResult(false);
-            var postTask = messageManager.GetPostById(comment.PostId, currentUser.Exists ? currentUser.Id : null);
-            await Task.WhenAll(authorTask, likeCountTask, likedTask, postTask);
-            return new CommentWithPostModel
+            await Task.WhenAll(authorTask, likeCountTask, likedTask);
+            return new CommentWithPostIdModel
             {
                 Id = comment.Id,
-                Post = await postTask,
+                PostId = comment.PostId,
                 Content = comment.Content,
                 Author = await authorTask,
                 Likes = await likeCountTask,

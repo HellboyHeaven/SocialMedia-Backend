@@ -12,7 +12,7 @@ public class RegisterUserHandler(IUserStore authStore, IUnitOfWork unitOfWork) :
         {
             try
             {
-                var hash = Crypt.HashPassword(request.Login);
+                var hash = Crypt.HashPassword(request.Password);
                 var entity = new UserEntity { Login = request.Login, PasswordHash = hash };
                 await authStore.Create(entity);
                 await unitOfWork.SaveChangesAsync();

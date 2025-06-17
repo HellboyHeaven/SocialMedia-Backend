@@ -3,7 +3,7 @@ using Core;
 
 namespace Application;
 
-public class CreateProfileHandler(IProfileStore postStore, ICdnProvider cdnProvider) : IRequestHandler<CreateProfileCommand, Guid>
+public class CreateProfileHandler(IProfileStore postStore, ICdnProvider cdnProvider, ICurrentUserService currentUser) : IRequestHandler<CreateProfileCommand, Guid>
 {
 
     public async Task<Guid> Handle(CreateProfileCommand request, CancellationToken cancellationToken)
@@ -15,7 +15,7 @@ public class CreateProfileHandler(IProfileStore postStore, ICdnProvider cdnProvi
         }
         var entity = new ProfileEntity
         {
-            UserId = request.UserId,
+            UserId = currentUser.Id,
             Username = request.Username,
             Nickname = request.Nickname,
             Description = request.Description,

@@ -14,7 +14,10 @@ public class LoginUserHandler(IUserStore authStore, IRefreshTokenStore refreshTo
             try
             {
                 var authEntity = await authStore.GetByLogin(request.Login);
-                Console.WriteLine(Crypt.Verify(request.Password, authEntity.PasswordHash));
+
+                if (authEntity == null)
+                    throw new NotFoundException($"User not found (login : {request.Login})");
+
                 if (!Crypt.Verify(request.Password, authEntity.PasswordHash))
                     throw new UnauthorizedException($"Incorrect password (logn : {request.Login})");
 

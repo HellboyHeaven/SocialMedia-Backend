@@ -64,6 +64,8 @@ Desktop.ini
 # Python virtual environment (if used)
 venv/
 ENV/
-
+.env
+*.env
 # PEM keys (security)
 *.pem
+.env
